@@ -1,4 +1,4 @@
-package com.functinal.programming;
+package com.functinal.programming.basics;
 
 
 import lombok.extern.slf4j.Slf4j;

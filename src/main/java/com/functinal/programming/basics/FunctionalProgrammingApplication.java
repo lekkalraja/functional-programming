@@ -1,4 +1,4 @@
-package com.functinal.programming;
+package com.functinal.programming.basics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
