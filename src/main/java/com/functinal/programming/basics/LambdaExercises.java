@@ -19,25 +19,25 @@ public class LambdaExercises {
          *
          * Lambda With Parameter, No Return Type
          */
-        Calculator adder = (a, b) -> log.info("Sum of {}, {} is {}", a, b, a+b);
+        Calculator<Integer> adder = (a, b) -> log.info("Sum of {}, {} is {}", a, b, a+b);
         adder.operation(2, 4);
-        Calculator multiplier = (a, b) -> log.info("Multiplication of {}, {} is {}", a, b, a*b);
+        Calculator<Integer> multiplier = (a, b) -> log.info("Multiplication of {}, {} is {}", a, b, a*b);
         multiplier.operation(3,3);
-        Calculator subtract = (a, b) -> log.info("Subtraction of {}, {} is {}", a, b, a-b);
+        Calculator<Integer> subtract = (a, b) -> log.info("Subtraction of {}, {} is {}", a, b, a-b);
         subtract.operation(5,1);
-        Calculator divider = (a, b) -> log.info("Division of {}, {} is {}", a, b, a/b);
+        Calculator<Integer> divider = (a, b) -> log.info("Division of {}, {} is {}", a, b, a/b);
         divider.operation(6,2);
 
         /**
          * Lambda with Parameter And Return Type
          */
-        Mapper square = a -> a * a;
+        Mapper<Integer, Integer> square = a -> a * a;
         log.info("Square of {} is {}", 9 , square.map(9));
 
         /**
          * Lambda with Multiple Statements
          */
-        Prime prime = a -> {
+        Prime<Integer> prime = a -> {
             boolean isItDivided = IntStream.rangeClosed(2, a / 2)
                     .filter(number -> a % number == 0)
                     .findAny()
@@ -59,21 +59,21 @@ public class LambdaExercises {
     /**
      * Exercise 2 : Method With Parameter, No Return Type
      */
-    interface Calculator {
-        void operation(int a, int b);
+    interface Calculator<T> {
+        void operation(T a, T b);
     }
 
     /**
      * Exercise 3 : Method with Parameter And Return Type
      */
-    interface Mapper{
-            int map(int data);
+    interface Mapper<T, R>{
+            R map(T data);
     }
 
     /**
      * Exercise 4 : Method with Multiple Statements
      */
-    interface Prime {
-        boolean isIt(int number);
+    interface Prime<T> {
+        boolean isIt(T number);
     }
 }
