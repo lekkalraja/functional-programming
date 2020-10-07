@@ -10,7 +10,7 @@ public class SupplierExercise {
 
     public static void main(String[] args) {
         Supplier<String> item = () -> "Item";
-        log.info("Supply Stirng : {}", item.get());
+        log.info("Supply String : {}", item.get());
 
         Supplier<Double> random = () -> new Random().nextDouble();
         log.info("Get Random Number : {}", random.get());
