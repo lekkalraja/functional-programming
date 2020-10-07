@@ -12,6 +12,6 @@ public class BinaryOperatorExercise {
          * public interface BinaryOperator<T> extends BiFunction<T,T,T>
          */
         BinaryOperator<String> concatenate = (left, right) -> left.concat("_").concat(right);
-        log.info("Concatenating {} and {} with Seperater {} is : {}", "Raja", "Rani", "_", concatenate.apply("Raja", "Rani"));
+        log.info("Concatenating {} and {} with Separator {} is : {}", "Raja", "Rani", "_", concatenate.apply("Raja", "Rani"));
     }
 }

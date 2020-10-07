@@ -13,7 +13,7 @@ public class PredicateExercise {
     public static void main(String[] args) {
 
         List<String> listOfNames = List.of("Achilleas", "Hector", "", "Helen", "", "", "Troy");
-        Predicate<String> emptyStringFilter = item -> item.length() == 0;
+        Predicate<String> emptyStringFilter = String::isEmpty;
         log.info(filterList(listOfNames, emptyStringFilter).toString());
 
         List<Integer> listOfIntegers = IntStream.rangeClosed(1, 100000).boxed().collect(Collectors.toList());
