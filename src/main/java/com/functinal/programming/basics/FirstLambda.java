@@ -16,7 +16,7 @@ public class FirstLambda {
         /**
          * 1 - A way of implementing Functional Interface (Runnable - Had single abstract method) with ImplementationClass
          */
-        Thread implementationClassThread = new Thread(new MyRunnable());
+        Thread implementationClassThread = new Thread(MyRunnable::new);
         implementationClassThread.start();
 
         /**
