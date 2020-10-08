@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * LAMBDA is a building block for functional programming in Java
  *
+ * ALL LAMBDA'S ARE LAZILY EVALUATED (WILL NOT EXECUTE UNTIL WE INVOKE METHOD)
  * It is a implementation for the @Functional Interface
  */
 @Slf4j
