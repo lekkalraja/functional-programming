@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.function.Consumer;
 
 /**
- * Iterator Design Pattern is a Behavioural design pattern
+ * Iterator Design Pattern is a Behavioural(way to communicate Object to Object) design pattern
  *  - It enables to get a way to access the elements of a collection object in sequential manner,
  *    without any need to know it's internal representation.
  */
