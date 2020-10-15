@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.functinal.programming'
 version = '0.0.1'
-sourceCompatibility = '11'
+sourceCompatibility = '14'
 
 configurations {
 	compileOnly {
@@ -29,6 +29,11 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 }
 
+tasks.withType(JavaCompile).each {
+	it.options.compilerArgs.add('--enable-preview')
+}
+
 test {
 	useJUnitPlatform()
+	jvmArgs(['--enable-preview'])
 }
